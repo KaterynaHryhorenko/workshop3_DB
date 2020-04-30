@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B638343-9435-2D49-1D8D-EDB90A160A65" name="country">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:05:06 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="country" id="98DA9138-23B6-7845-56D1-2F2DC0B2E40D">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:06:51 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>38,2</dataTypeSize>
+<ownDataTypeParameters>38,2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="region1" id="145A58FA-B513-17B3-F548-08AF033F8207">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:15:29 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="45F4C894-42D5-05AD-5297-3869597DF081" referredColumn="0B38C0D4-A4DD-5B8F-9C2B-33B646F6B734"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48892A5A-081B-D677-841B-9632BF1F5CEE" name="country_PK">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:06:51 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98DA9138-23B6-7845-56D1-2F2DC0B2E40D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FDBF559-753F-5C9F-513D-46D76907F62E" name="country_Region_FK">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:15:29 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="145A58FA-B513-17B3-F548-08AF033F8207"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

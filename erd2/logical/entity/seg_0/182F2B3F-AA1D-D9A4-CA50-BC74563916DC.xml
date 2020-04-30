@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="182F2B3F-AA1D-D9A4-CA50-BC74563916DC" name="country typev1">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>E42E4FD6-9DC1-9620-4204-E7E8110906C8</generatorID>
+<ownerDesignName>erd2</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="agriculture" id="EF974AF5-0748-1A08-239F-69077270EA20">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>139F7F39-2561-9C3D-12AD-2DC41B7A96B0</generatorID>
+<ownerDesignName>erd2</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,38,3</ownDataTypeParameters>
+</Attribute>
+<Attribute name="industry" id="7417AB7C-A97B-134B-7C56-7C3A8436C85D">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>87CFF983-16B2-313F-1898-D66803E4EABF</generatorID>
+<ownerDesignName>erd2</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,38,3</ownDataTypeParameters>
+</Attribute>
+<Attribute name="services" id="F7322208-60C6-DF52-01D4-D0265C5AA78D">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>CB00A325-09B8-045B-A9E2-ED884D4A11E0</generatorID>
+<ownerDesignName>erd2</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,38,3</ownDataTypeParameters>
+</Attribute>
+<Attribute name="country fk" id="1F1EDF26-0C5D-33A6-0858-CC613A6CE6B6">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>FEC0EFCD-0C38-AC09-B83A-74B8D14D863E</generatorID>
+<ownerDesignName>erd2</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<referedAttribute>5961835D-FE12-233D-9CF8-6A96AD64C37C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>38,2</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add date" id="AC40E4E3-7B45-CE2F-E99E-B53FDB68936F">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>72205EC7-28EA-3197-C0E7-75ADA7F8A507</generatorID>
+<ownerDesignName>erd2</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8C9DB311-22E2-1B79-E75E-9060A039086A" name="country type  UN">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>5C45642B-2B43-94AC-8C1C-08F8C221C91B</generatorID>
+<ownerDesignName>erd2</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>AC40E4E3-7B45-CE2F-E99E-B53FDB68936F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
