@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E814B6CB-831F-EA9E-0C9F-04CD4CF33660" name="Net migration">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:11:35 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="net migration" id="A7429921-FF7E-EEFB-2772-D09E862BF511">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:12:25 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,38,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="country_fk" id="D4CF2DB9-D97C-379D-53A7-1672F0F1F162">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:27:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>38,2</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2AB998F8-5A6F-32E0-7284-1A4881533532" referredColumn="98DA9138-23B6-7845-56D1-2F2DC0B2E40D"/>
+</associations>
+</Column>
+<Column name="add_date" id="6F682594-FE83-A572-8A20-8DD0EB1F21DD">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:40:52 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F9BBA269-3A1B-35E7-A877-6D0CF6B274FC" name="Net migration__UN">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:48:50 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F682594-FE83-A572-8A20-8DD0EB1F21DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA76F354-DD27-317A-7736-8E017AF9E725" name="Net migration_country_FK">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:27:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4CF2DB9-D97C-379D-53A7-1672F0F1F162"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E42E4FD6-9DC1-9620-4204-E7E8110906C8" name="country type">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:08:38 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="agriculture" id="139F7F39-2561-9C3D-12AD-2DC41B7A96B0">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:11:18 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,38,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="industry" id="87CFF983-16B2-313F-1898-D66803E4EABF">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:11:18 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,38,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="services" id="CB00A325-09B8-045B-A9E2-ED884D4A11E0">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:11:18 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,38,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="country_fk" id="5D35B19C-FEFE-716F-2BF9-FE7247157FCC">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:18:13 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>38,2</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF4A2DD8-61C7-10DB-9D76-3DF5EFC2E202" referredColumn="98DA9138-23B6-7845-56D1-2F2DC0B2E40D"/>
+</associations>
+</Column>
+<Column name="add_date" id="72205EC7-28EA-3197-C0E7-75ADA7F8A507">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:40:27 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5C45642B-2B43-94AC-8C1C-08F8C221C91B" name="country type__UN">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:49:34 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72205EC7-28EA-3197-C0E7-75ADA7F8A507"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5F2178F4-86BD-6228-781A-A32ADAA06434" name="country type_country_FK">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:18:13 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D35B19C-FEFE-716F-2BF9-FE7247157FCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="country type_CK_1" directorySegmentName="seg_0" id="D55C7E55-BA98-9D1E-F963-282531426ADD">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:16:04 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<rule><![CDATA[agriculture+industry+services=1]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

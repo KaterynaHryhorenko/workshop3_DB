@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" mainViewID="BA66E0D8-4AEB-9264-8AD3-E9827A10CBC9">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 17:02:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

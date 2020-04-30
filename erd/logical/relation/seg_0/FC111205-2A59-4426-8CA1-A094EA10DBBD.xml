@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="pop destiny_country_FK" directorySegmentName="seg_0" id="FC111205-2A59-4426-8CA1-A094EA10DBBD">
+<createdBy>TOSHIBA</createdBy>
+<createdTime>2020-04-30 18:32:47 UTC</createdTime>
+<generatorID>33B0669D-1139-63E2-67BC-B5F17CB73DF6</generatorID>
+<ownerDesignName>erd</ownerDesignName>
+<engineerTo>
+<item key="B4CBB18E-96BE-16A3-C5AA-AC04DBBCF02C" value="true"/>
+</engineerTo>
+<sourcePk>28DCE933-630A-88FC-7C1C-ED3DA96597F7</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7555BCB5-4AF3-A9D0-723B-B84C2BECB458</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5D1C6A93-E524-A344-7A9F-EBE656B47B9A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
