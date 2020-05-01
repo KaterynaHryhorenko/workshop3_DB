@@ -19,7 +19,7 @@ CREATE TABLE country_type
 ALTER TABLE country_type
     ADD CONSTRAINT country_type_CK_1 CHECK ( agriculture + industry + services = 1 );
 
-ALTER TABLE country_type ADD CONSTRAINT country_type__UN UNIQUE ( add_date );
+
 
 CREATE TABLE gdp
 
@@ -30,7 +30,7 @@ CREATE TABLE gdp
 
 ALTER TABLE gdp ADD CONSTRAINT gdp_ck_1 CHECK ( gdp >= 0 );
 
-ALTER TABLE gdp ADD CONSTRAINT gdp__un UNIQUE ( add_date );
+
 
 
 CREATE TABLE net_migration
@@ -41,7 +41,7 @@ CREATE TABLE net_migration
     add_date DATE ) 
 ;
 
-ALTER TABLE net_migration ADD CONSTRAINT Net_migration__UN UNIQUE ( add_date );
+
 
 CREATE TABLE pop_destiny
 
@@ -55,7 +55,7 @@ ALTER TABLE pop_destiny ADD CONSTRAINT "pop destiny_CK_1" CHECK ( population >= 
 
 ALTER TABLE pop_destiny ADD CONSTRAINT "pop destiny_CK_2" CHECK ( area >= 0 );
 
-ALTER TABLE pop_destiny ADD CONSTRAINT "pop destiny__UN" UNIQUE ( add_date );
+
 
 CREATE TABLE region (
     region VARCHAR2(128) NOT NULL
