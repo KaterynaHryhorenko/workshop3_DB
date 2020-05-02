@@ -1,10 +1,21 @@
+
 import cx_Oracle
 
-conn = cx_Oracle.connect("SYSTEM","2805052001","T/xe")
+
+username = "SYSTEM"
+password = "2805052001"
+database = "T/xe"
+
+try:
+    connection = cx_Oracle.connect(username, password, database)
+except cx_Oracle.DatabaseError as exception:
+    print('Failed to connect to %s\n', database)
+    print(exception)
+    exit(1)
 import chart_studio
 chart_studio.tools.set_credentials_file(username='Kate_Hryhorenko', api_key='S6Cu2THhk1VIBPXEKZVf')
 
-cur = conn.cursor()
+cur = connection.cursor()
 
 cur.execute('''
 SELECT
@@ -32,7 +43,7 @@ bar = [go.Bar(x=y, y=x)]
 fig = go.Figure(data=bar)
 
 
-bar_money_url=py.plot(fig,filename='Money of service industry.2', auto_open=False)
+bar_money_url=py.plot(fig,filename='Money of service industry.3', auto_open=False)
 
 cur.execute('''
 SELECT
@@ -53,7 +64,7 @@ for row in rows:
     y.append(row[1])
 print(x, y)
 pie = go.Figure(data=[go.Pie(labels=y, values=x )])
-pie_gdp_url=py.plot(pie, filename='The sum of all the GDP of region realetive to the GDP of the Earth.2',auto_open=False)
+pie_gdp_url=py.plot(pie, filename='The sum of all the GDP of region realetive to the GDP of the Earth.3',auto_open=False)
 
 cur.execute(''' SELECT
     round(SUM(net_migration), 3) AS "net migration",
@@ -76,7 +87,7 @@ print(x, y)
 
 scatter = go.Figure([go.Scatter(x=y, y=x)])
 
-scatter_migration_url=py.plot(scatter, filename = 'Level of migration above the regions.2', auto_open=False)
+scatter_migration_url=py.plot(scatter, filename = 'Level of migration above the regions.3', auto_open=False)
 
 import re
 import chart_studio.dashboard_objs as dashboard
@@ -115,8 +126,8 @@ my_dboard.insert(box_1)
 my_dboard.insert(box_2, 'below', 1)
 my_dboard.insert(box_3, 'left', 2)
 
-py.dashboard_ops.upload(my_dboard, 'Dashboard.2')
+py.dashboard_ops.upload(my_dboard, 'Dashboard.3')
 
-conn.commit()
+connection.commit()
 cur.close()
-conn.close()
+connection.close()

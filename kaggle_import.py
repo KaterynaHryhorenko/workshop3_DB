@@ -1,4 +1,5 @@
 
+
 def correction(str):
     if str.find('&') != -1:
         str=str.replace('&','and')

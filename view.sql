@@ -14,8 +14,10 @@ FROM
     LEFT JOIN pop_destiny ON pop_destiny.country_fk = country.country
     LEFT JOIN net_migration ON net_migration.country_fk = country.country
 WHERE
-    country_type.add_date = '02.05.2020'
-    AND gdp.add_date = '02.05.2020'
-    AND country_type.add_date = '02.05.2020'
-    AND net_migration.add_date = '02.05.2020';
+    country_type.add_date = TO_DATE('2020/05/2', 'yyyy/mm/dd')
+    AND gdp.add_date = TO_DATE('2020/05/2', 'yyyy/mm/dd')
+    AND country_type.add_date = TO_DATE('2020/05/2', 'yyyy/mm/dd')
+    AND net_migration.add_date = TO_DATE('2020/05/2', 'yyyy/mm/dd');
+    
+
     
