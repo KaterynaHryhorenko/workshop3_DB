@@ -10,7 +10,7 @@ begin
 
 
  add_date  := TO_CHAR(SYSDATE, 'DD.MM.YYYY');
- 
+
   FOR i IN 1..5 LOOP
         INSERT INTO pop_destiny (
         country_fk,

@@ -17,7 +17,7 @@ CREATE TABLE country_type
 ;
 
 ALTER TABLE country_type
-    ADD CONSTRAINT country_type_CK_1 CHECK ( agriculture + industry + services = 1 );
+    ADD CONSTRAINT country_type_CK_1 CHECK ( agriculture + industry + services = 1 or agriculture = null or industry=null or services=null);
 
 
 
@@ -36,7 +36,7 @@ ALTER TABLE gdp ADD CONSTRAINT gdp_ck_1 CHECK ( gdp >= 0 );
 CREATE TABLE net_migration
 
 (
-    net_migration  NUMBER(38, 2),
+    net_migration  FLOAT,
     country_fk     VARCHAR2( 38) NOT NULL, 
     add_date DATE ) 
 ;
