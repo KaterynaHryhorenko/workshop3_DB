@@ -1,5 +1,3 @@
-
-
 def correction(str):
     if str.find('&') != -1:
         str=str.replace('&','and')
@@ -15,6 +13,12 @@ def to_float(str):
     lst = str.split(",")
     if (len(lst) == 2):
         return lst[0]+"."+lst[1]
+    if(str.rfind('')==0):
+        return "null"
+    return str
+def null(str):
+    if (str.rfind('') == 0):
+        return "null"
     return str
 
 import csv
@@ -44,10 +48,14 @@ with open('world.csv') as world:
     for row in reader:
         lst_region.append([correction(row[1])])
         lst_country.append((correction(row[0]),correction(row[1])))
-        lst_pop_destiny.append((correction(row[0]),row[2],row[3]))
-        lst_migration.append((correction(row[0]), to_float(row[6])))
-        lst_gdp.append((correction(row[0]), row[8]))
-        lst_type_country.append((correction(row[0]),to_float(row[17]),to_float(row[18]),to_float(row[19])))
+        if (null(row[2])!= "null" and null(row[3])!= "null"):
+            lst_pop_destiny.append((correction(row[0]),row[2],row[3]))
+        if (to_float(row[6])!="null"):
+            lst_migration.append((correction(row[0]), to_float(row[6])))
+        if (null(row[8])!= "null"):
+            lst_gdp.append((correction(row[0]), row[8]))
+        if (to_float(row[17]) != "null" and to_float(row[18]) != "null" and to_float(row[19]) != "null"):
+            lst_type_country.append((correction(row[0]),to_float(row[17]),to_float(row[18]),to_float(row[19])))
 
 
 insert_query = '''insert into region (region) values (trim(:1))'''
@@ -83,6 +91,7 @@ connection.commit()
 
 insert_query = '''insert into country_type (country_fk,agriculture,industry,services,add_date) values (trim(:1),:2,:3,:4,TO_DATE('2020/05/2', 'yyyy/mm/dd'))'''
 cursor.prepare(insert_query)
+print(lst_type_country[1:])
 cursor.executemany(None,lst_type_country[1:])
 connection.commit()
 
