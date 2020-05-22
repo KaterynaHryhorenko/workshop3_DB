@@ -50,6 +50,7 @@ with open('world.csv') as world:
         lst_country.append((correction(row[0]),correction(row[1])))
         if (null(row[2])!= "null" and null(row[3])!= "null"):
             lst_pop_destiny.append((correction(row[0]),row[2],row[3]))
+            print(row[2],row[3])
         if (to_float(row[6])!="null"):
             lst_migration.append((correction(row[0]), to_float(row[6])))
         if (null(row[8])!= "null"):
